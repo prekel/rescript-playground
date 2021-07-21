@@ -4,15 +4,15 @@
   "scripts": {
     "build": "rescript",
     "clean": "rescript clean -with-deps",
-    "start": "rescript build -w"
+    "start": "rescript build -w",
+    "snow:build": "snowpack build"
   },
-  "keywords": [
-    "rescript"
-  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@rescript/react": "^0.10.3",
     "rescript": "*"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.2"
   }
 }
