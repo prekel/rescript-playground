@@ -1,6 +1,5 @@
-.DS_Store
-/node_modules/
+.snowpack
+build
+node_modules
+/.merlin
 /lib/
-.bsb.lock
-.merlin
-/build/

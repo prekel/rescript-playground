@@ -1,12 +1,25 @@
+/** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
-    // optimize: {
-    //     entrypoints: ["src/index.js"],
-    //     bundle: true,
-    //     minify: true,
-    //     target: 'es2018',
-    //   },
-    mount: {
-      public: '/',
-      src: '/dist',
-    }
-  }
+  mount: {
+    public: { url: '/', static: true },
+    src: { url: '/dist' },
+  },
+  exclude: ["**/*.{res,resi}"],
+  plugins: [
+    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-dotenv',
+    '@jihchi/plugin-rescript',
+  ],
+  packageOptions: {
+    /* ... */
+  },
+  devOptions: {
+    /* ... */
+  },
+  buildOptions: {
+    /* ... */
+  },
+  alias: {
+    /* ... */
+  },
+};

@@ -1,18 +1,24 @@
 {
-  "name": "rescript-project-template",
-  "version": "0.0.1",
   "scripts": {
-    "build": "rescript",
-    "clean": "rescript clean -with-deps",
-    "start": "rescript build -w",
-    "snow:build": "snowpack build"
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "web-test-runner \"src/**/__tests__/*.bs.js\"",
+    "clean": "rescript clean"
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "rescript": "*"
+    "@rescript/react": "^0.10.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "snowpack": "^3.8.2"
+    "@jihchi/plugin-rescript": "^1.0.0",
+    "@snowpack/plugin-dotenv": "^2.1.0",
+    "@snowpack/plugin-react-refresh": "^2.4.2",
+    "@snowpack/web-test-runner-plugin": "^0.2.2",
+    "@testing-library/react": "^11.2.6",
+    "@web/test-runner": "^0.13.2",
+    "chai": "^4.3.4",
+    "rescript": "^9.1.1",
+    "snowpack": "~3.0"
   }
 }

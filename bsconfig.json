@@ -1,14 +1,18 @@
 {
-  "name": "rescript-project-template",
-  "version": "0.0.1",
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
-  "package-specs": {
-    "module": "es6-global",
-    "in-source": true
-  },
+  "name": "app-template-reason-react",
+  "reason": { "react-jsx": 3 },
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": [{ "dir": "__tests__", "type": "dev" }]
+    }
+  ],
+  "package-specs": [{ "module": "es6", "in-source": true }],
   "suffix": ".bs.js",
-  "bs-dependencies": []
+  "namespace": true,
+  "bs-dependencies": ["@rescript/react"],
+  "bs-dev-dependencies": [],
+  "ppx-flags": [],
+  "refmt": 3
 }
