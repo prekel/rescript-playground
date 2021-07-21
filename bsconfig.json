@@ -5,7 +5,7 @@
   "sources": [
     {
       "dir": "src",
-      "subdirs": [{ "dir": "__tests__", "type": "dev" }]
+      "subdirs": true
     }
   ],
   "package-specs": [{ "module": "es6", "in-source": true }],
