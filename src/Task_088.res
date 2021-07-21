@@ -1,0 +1,3 @@
+let main = (coins) => {
+    coins
+}
