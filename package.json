@@ -1,15 +1,14 @@
 {
   "scripts": {
-    "test": "web-test-runner \"src/**/__tests__/*.bs.js\"",
+    "test": "retest spec/**/*.bs.js",
     "snow:build": "snowpack build",
     "re:start": "rescript build -w",
     "re:build": "rescript",
     "re:clean": "rescript clean"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "rescript": "^9.1.4",
+    "rescript-test": "^3.1.0",
     "snowpack": "^3.8.3"
   }
 }

@@ -1,18 +1,24 @@
 {
   "name": "rescript-playground",
-  "reason": { "react-jsx": 3 },
-  "bsc-flags": ["-bs-super-errors"],
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
   "sources": [
     {
       "dir": "src",
       "subdirs": true
     }
   ],
-  "package-specs": [{ "module": "es6", "in-source": true }],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [],
-  "bs-dev-dependencies": [],
+  "bs-dev-dependencies": ["rescript-test"],
   "ppx-flags": [],
   "refmt": 3
 }
