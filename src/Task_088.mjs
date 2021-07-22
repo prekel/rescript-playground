@@ -7,7 +7,7 @@ function razmen(money, coins) {
   var a = Belt_Array.reduce(coins, undefined, (function (acc, el) {
           if (acc !== undefined) {
             return acc;
-          } else if (money > el) {
+          } else if (money >= el) {
             return el;
           } else {
             return ;
@@ -16,41 +16,41 @@ function razmen(money, coins) {
   if (a !== undefined) {
     return {
             hd: a,
-            tl: razmen(money - a | 0, coins)
+            tl: razmen(money - a, coins)
           };
   } else {
     return /* [] */0;
   }
 }
 
-var coins = [
-  0.01,
-  0.05,
-  0.10,
-  0.25,
-  0.50,
-  1.00,
-  5.00,
-  10.00
-];
+var coins1 = [
+    0.01,
+    0.05,
+    0.10,
+    0.25,
+    0.50,
+    1.00,
+    5.00,
+    10.00
+  ].reverse();
 
-var cash = [
-  10,
-  50,
-  100,
-  500,
-  1000
-];
+var cash1 = [
+    10,
+    50,
+    100,
+    500,
+    1000
+  ].reverse();
 
 function main(coins) {
   var m = Belt_Array.reduce(coins, 0, (function (a, b) {
-          return a + b | 0;
+          return a + b;
         }));
-  var ca = razmen(m, cash);
+  var ca = razmen(m, cash1);
   var mca = Belt_List.reduce(ca, 0, (function (a, b) {
-          return a + b | 0;
+          return a + b;
         }));
-  var co = razmen(mca, coins);
+  var co = razmen(m - mca, coins1);
   return [
           Belt_List.toArray(ca),
           Belt_List.toArray(co)
@@ -59,9 +59,9 @@ function main(coins) {
 
 export {
   razmen ,
-  coins ,
-  cash ,
+  coins1 ,
+  cash1 ,
   main ,
   
 }
-/* No side effect */
+/* coins1 Not a pure module */

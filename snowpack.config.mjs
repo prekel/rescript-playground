@@ -4,6 +4,7 @@ export default {
     public: { url: "/", static: true },
     src: { url: "/dist" },
   },
+
   exclude: ["**/*.{res,resi}"],
   plugins: [
   ],
