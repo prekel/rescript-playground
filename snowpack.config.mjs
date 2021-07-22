@@ -5,9 +5,8 @@ export default {
     src: { url: "/dist" },
   },
 
-  exclude: ["**/*.{res,resi}"],
-  plugins: [
-  ],
+  exclude: ["**/*.{res,resi,re,rei,ml,mli}"],
+  plugins: [],
   packageOptions: {
     /* ... */
   },

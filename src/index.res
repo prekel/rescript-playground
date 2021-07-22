@@ -26,7 +26,7 @@ let _ = () => {
   )
 }
 
-let _ = {
+let _ = () => {
   open Task_088
 
   Js.Console.log(razmen(11, cash1)->Belt.List.toArray)
