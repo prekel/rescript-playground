@@ -3,26 +3,13 @@
 import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import * as Task_088$RescriptPlayground from "./Task_088.mjs";
 
-console.log(Belt_List.toArray(Task_088$RescriptPlayground.razmen(0.5700000000000003, Task_088$RescriptPlayground.coins1)));
+console.log(Belt_List.toArray(Task_088$RescriptPlayground.razmen(11, Task_088$RescriptPlayground.cash1)));
+
+console.log(Belt_List.toArray(Task_088$RescriptPlayground.razmen(11, Task_088$RescriptPlayground.coins1)));
 
 console.log(Task_088$RescriptPlayground.main([
-          0.01,
-          0.01,
-          0.05,
-          0.50,
-          0.50,
-          0.50,
-          1,
-          1,
-          1,
-          1,
-          5,
-          5,
-          5,
-          10,
-          10,
-          10,
-          10
+          0.10,
+          0.01
         ]));
 
 export {

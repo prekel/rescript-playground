@@ -16,7 +16,7 @@ function razmen(money, coins) {
   if (a !== undefined) {
     return {
             hd: a,
-            tl: razmen(money - a, coins)
+            tl: razmen(money - a | 0, coins)
           };
   } else {
     return /* [] */0;
@@ -24,36 +24,43 @@ function razmen(money, coins) {
 }
 
 var coins1 = [
-    0.01,
-    0.05,
-    0.10,
-    0.25,
-    0.50,
-    1.00,
-    5.00,
-    10.00
-  ].reverse();
-
-var cash1 = [
+    1,
+    5,
     10,
+    25,
     50,
     100,
     500,
     1000
   ].reverse();
 
-function main(coins) {
+var cash1 = [
+    1000,
+    5000,
+    10000,
+    50000,
+    100000
+  ].reverse();
+
+function toc(a) {
+  return a / 100;
+}
+
+function main(coins2) {
+  var coins = Belt_Array.map(coins2, (function (a) {
+          return a * 100 | 0;
+        }));
   var m = Belt_Array.reduce(coins, 0, (function (a, b) {
-          return a + b;
+          return a + b | 0;
         }));
   var ca = razmen(m, cash1);
   var mca = Belt_List.reduce(ca, 0, (function (a, b) {
-          return a + b;
+          return a + b | 0;
         }));
-  var co = razmen(m - mca, coins1);
+  var co = razmen(m - mca | 0, coins1);
   return [
-          Belt_List.toArray(ca),
-          Belt_List.toArray(co)
+          Belt_List.toArray(Belt_List.map(ca, toc)),
+          Belt_List.toArray(Belt_List.map(co, toc))
         ];
 }
 
@@ -61,6 +68,7 @@ export {
   razmen ,
   coins1 ,
   cash1 ,
+  toc ,
   main ,
   
 }

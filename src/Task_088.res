@@ -11,18 +11,21 @@ let rec razmen = (money, coins) => {
     }
   )
   switch a {
-  | Some(a) => list{a, ...razmen(money -. a, coins)}
+  | Some(a) => list{a, ...razmen(money - a, coins)}
   | _ => list{}
   }
 }
 
-let coins1 = [0.01, 0.05, 0.10, 0.25, 0.50, 1.00, 5.00, 10.00]->Js.Array.reverseInPlace
-let cash1 = [10., 50., 100., 500., 1000.]->Js.Array.reverseInPlace
+let coins1 = [0_01, 0_05, 0_10, 0_25, 0_50, 1_00, 5_00, 10_00]->Js.Array.reverseInPlace
+let cash1 = [10_00, 50_00, 100_00, 500_00, 1000_00]->Js.Array.reverseInPlace
 
-let main = coins => {
-  let m = coins->Belt.Array.reduce(0., (a, b) => a +. b)
+let toc = a => a->Belt.Int.toFloat /. 100.
+
+let main = coins2 => {
+  let coins = coins2->Belt.Array.map(a => (a *. 100.)->Belt.Float.toInt)
+  let m = coins->Belt.Array.reduce(0, (a, b) => a + b)
   let ca = razmen(m, cash1)
-  let mca = ca->Belt.List.reduce(0., (a, b) => a +. b)
-  let co = razmen(m -. mca, coins1)
-  (ca->Belt.List.toArray, co->Belt.List.toArray)
+  let mca = ca->Belt.List.reduce(0, (a, b) => a + b)
+  let co = razmen(m - mca, coins1)
+  (ca->Belt.List.map(toc)->Belt.List.toArray, co->Belt.List.map(toc)->Belt.List.toArray)
 }
