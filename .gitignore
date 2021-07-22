@@ -4,3 +4,4 @@ node_modules
 /.merlin
 /lib/
 /.bsb.lock
+/.vscode/
