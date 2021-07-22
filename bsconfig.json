@@ -7,6 +7,11 @@
     {
       "dir": "src",
       "subdirs": true
+    },
+    {
+      "dir": "spec",
+      "subdirs": true,
+      "type": "dev"
     }
   ],
   "package-specs": [
@@ -15,7 +20,7 @@
       "in-source": true
     }
   ],
-  "suffix": ".bs.js",
+  "suffix": ".mjs",
   "namespace": true,
   "bs-dependencies": [],
   "bs-dev-dependencies": ["rescript-test"],

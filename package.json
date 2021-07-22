@@ -1,11 +1,12 @@
 {
   "scripts": {
-    "test": "retest spec/**/*.bs.js",
+    "test": "retest spec/Tests.mjs",
     "snow:build": "snowpack build",
     "re:start": "rescript build -w",
     "re:build": "rescript",
     "re:clean": "rescript clean"
   },
+  "type": "module",
   "devDependencies": {
     "rescript": "^9.1.4",
     "rescript-test": "^3.1.0",
