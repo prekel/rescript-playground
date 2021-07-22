@@ -6,9 +6,6 @@ module.exports = {
   },
   exclude: ["**/*.{res,resi}"],
   plugins: [
-    "@snowpack/plugin-react-refresh",
-    "@snowpack/plugin-dotenv",
-    "@jihchi/plugin-rescript",
   ],
   packageOptions: {
     /* ... */

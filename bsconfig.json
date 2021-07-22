@@ -1,5 +1,5 @@
 {
-  "name": "app-template-reason-react",
+  "name": "rescript-playground",
   "reason": { "react-jsx": 3 },
   "bsc-flags": ["-bs-super-errors"],
   "sources": [
@@ -11,7 +11,7 @@
   "package-specs": [{ "module": "es6", "in-source": true }],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["@rescript/react"],
+  "bs-dependencies": [],
   "bs-dev-dependencies": [],
   "ppx-flags": [],
   "refmt": 3
