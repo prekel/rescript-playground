@@ -1,5 +1,3 @@
 let main a b =
-  Belt.List.makeBy (b - a + 1) (fun i -> i + a)
-  |. Belt.List.toArray
+   List.init (b - a + 1) (fun i -> i + a)
 
-let _ = Js.Console.log @@ main 3 9

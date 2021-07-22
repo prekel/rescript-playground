@@ -4,3 +4,5 @@ node_modules
 /.merlin
 /lib/
 /.bsb.lock
+/_esy/
+/esy.lock/
