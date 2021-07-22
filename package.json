@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "retest spec/Tests.mjs",
+    "test": "retest test/Tests.mjs",
     "snow:build": "snowpack build",
     "re:start": "rescript build -w",
     "re:build": "rescript",
