@@ -4,7 +4,7 @@ import * as Belt_List from "rescript/lib/es6/belt_List.js";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 
 function razmen(money, coins) {
-  var a = Belt_Array.reduce(coins, undefined, (function (acc, el) {
+  var a = Belt_Array.reduceU(coins, undefined, (function (acc, el) {
           if (acc !== undefined) {
             return acc;
           } else if (money >= el) {
@@ -47,20 +47,20 @@ function toc(a) {
 }
 
 function main(coins2) {
-  var coins = Belt_Array.map(coins2, (function (a) {
+  var coins = Belt_Array.mapU(coins2, (function (a) {
           return a * 100 | 0;
         }));
-  var m = Belt_Array.reduce(coins, 0, (function (a, b) {
+  var m = Belt_Array.reduceU(coins, 0, (function (a, b) {
           return a + b | 0;
         }));
   var ca = razmen(m, cash1);
-  var mca = Belt_List.reduce(ca, 0, (function (a, b) {
+  var mca = Belt_List.reduceU(ca, 0, (function (a, b) {
           return a + b | 0;
         }));
   var co = razmen(m - mca | 0, coins1);
   return [
-          Belt_List.toArray(Belt_List.map(ca, toc)),
-          Belt_List.toArray(Belt_List.map(co, toc))
+          Belt_List.toArray(Belt_List.mapU(ca, toc)),
+          Belt_List.toArray(Belt_List.mapU(co, toc))
         ];
 }
 
