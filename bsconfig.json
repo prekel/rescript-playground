@@ -23,7 +23,18 @@
   "suffix": ".mjs",
   "namespace": true,
   "bs-dependencies": [],
-  "bs-dev-dependencies": ["rescript-test"],
+  "bs-dev-dependencies": [
+    "rescript-test"
+  ],
   "ppx-flags": [],
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {},
+    "generatedFileExtension": ".gen.tsx",
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  },
   "refmt": 3
 }

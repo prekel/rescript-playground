@@ -8,6 +8,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "gentype": "^4.1.0",
     "rescript": "^9.1.4",
     "rescript-test": "^3.1.0",
     "snowpack": "^3.8.3"

@@ -4,7 +4,7 @@ let fastSum sums (l, r) =
   | Some l, Some r -> r - l 
   | None, Some r -> r 
   | _ -> failwith "1"
- 
+
 let maxSum arr range = 
   let sums = Array.fold_left (fun state b -> 
     match state with 
