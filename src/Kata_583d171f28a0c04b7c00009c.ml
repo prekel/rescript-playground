@@ -6,9 +6,9 @@ let fastSum sums (l, r) =
   | _ -> failwith "1"
 
 let maxSum arr range = 
-  let sums = Array.fold_left (fun state b -> 
+  let sums = arr |. Belt.Array.reduce [] (fun state b -> 
     match state with 
     | [] -> [b]
-    | a :: _ -> (a + b) :: state) [] arr |. Belt.List.toArray |. Belt.Array.reverse in
+    | a :: _ -> (a + b) :: state) |. Belt.List.toArray |. Belt.Array.reverse in
   let rangeSums = range |. Belt.Array.map (fun b -> fastSum sums b) in
   Belt.Array.reduce rangeSums (rangeSums |. Belt.Array.getExn 0) max
