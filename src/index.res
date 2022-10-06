@@ -1,36 +1,9 @@
-let _ = () => {
-  open Task_088
+let _ = {
+  open LC_number_of_dice_rolls_with_target_sum
 
-  Js.Console.log(razmen(57, coins1)->Belt.List.toArray)
-
-  Js.Console.log(
-    main([
-      0.01,
-      0.01,
-      0.05,
-      0.50,
-      0.50,
-      0.50,
-      1.,
-      1.,
-      1.,
-      1.,
-      5.,
-      5.,
-      5.,
-      10.,
-      10.,
-      10.,
-      10.,
-    ]),
-  )
-}
-
-let _ = () => {
-  open Task_088
-
-  Js.Console.log(razmen(11, cash1)->Belt.List.toArray)
-  Js.Console.log(razmen(11, coins1)->Belt.List.toArray)
-
-  Js.Console.log(main([0.10, 0.01]))
+  Js.Console.log(numRollsToTarget(1, 6, 3))
+  Js.Console.log(numRollsToTarget(2, 6, 7))
+  Js.Console.log(numRollsToTarget(4, 3, 7))
+  Js.Console.log(numRollsToTarget(30, 3, 50))
+  // Js.Console.log(numRollsToTarget(30, 30, 500))
 }
